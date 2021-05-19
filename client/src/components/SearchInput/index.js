@@ -4,6 +4,7 @@ import Container from "../Container";
 function SearchInput() {
     return (
         <Container>
+            <h3>Book Search</h3>
             <p className="lead mb-4">Enter below the title of the book you want to look for : </p>
             <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <div className="input-group mb-3">
