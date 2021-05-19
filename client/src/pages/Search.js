@@ -1,8 +1,12 @@
 import React from "react";
+import Hero from "../components/Hero";
 import Navbar from "../components/Navbar";
 function Search() {
     return (
-        <Navbar />
+        <div>
+            <Navbar />
+            <Hero />
+        </div>
     )
 };
 
