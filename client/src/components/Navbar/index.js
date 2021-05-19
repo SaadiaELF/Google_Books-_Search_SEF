@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 function Navbar() {
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top" id="mainNav">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
                 <div className="container">
+                <i className="fas fa-book fa-2x me-3"></i>
                     <Link className="navbar-brand" to="/">Google Books</Link>
                     <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
                         data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
