@@ -29,7 +29,7 @@ function Results(props) {
                     <Image/>
                 </Col>
                 <Col size="md-10">
-                    <BookDescription description={props.description} />
+                    <BookDescription/>
                 </Col>
             </Row>
         </Container >

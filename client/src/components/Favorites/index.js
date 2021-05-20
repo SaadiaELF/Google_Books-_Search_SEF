@@ -15,25 +15,21 @@ function Favorites(props) {
             <Container>
             <Row padding="" border="">
                 <Col size="md-10">
-                    <BookHeader>
-                        title ={props.title}
-                        subtitle ={props.subtitle}
-                        authors ={props.authors}
-                    </BookHeader>
+                    <BookHeader/>
                 </Col>
                 <Col size="md-2">
                     <BtnGroup>
                         <Button type="secondary">View</Button>
-                        <Button type="danger">Delete</Button>
+                        <Button type="danger">Save</Button>
                     </BtnGroup>
                 </Col>
             </Row>
             <Row padding="p-2" border="border">
                 <Col size="md-2">
-                    <Image image={props.image} title={props.title} />
+                    <Image/>
                 </Col>
                 <Col size="md-10">
-                    <BookDescription description={props.description} />
+                    <BookDescription/>
                 </Col>
             </Row>
         </Container >
