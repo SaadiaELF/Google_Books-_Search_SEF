@@ -4,7 +4,7 @@ function Button(props) {
     return (
 
 
-        <button type="button" className={`btn btn-${props.type}`}>{ props.text }</button >
+        <button type="button" className={`btn btn-${props.type}`}>{ props.children}</button >
 
 
     );
