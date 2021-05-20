@@ -1,6 +1,5 @@
 import React from "react";
 import Container from "../Container";
-import SearchInput from "../SearchInput";
 
 function Hero() {
     return (
