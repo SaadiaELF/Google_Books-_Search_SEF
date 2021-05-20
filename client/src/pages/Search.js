@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Results from "../components/Results";
 import SearchInput from "../components/SearchInput";
 import API from "../utils/API";
+import BookContext from "../utils/BookContext"
 
 function Search() {
 
@@ -39,12 +40,14 @@ function Search() {
     }, [search]);
 
     return (
-        <div>
-            <Navbar />
-            <Hero />
-            <SearchInput />
-            <Results />
-        </div>
+        <BookContext.Provider value={book}>
+            <div>
+                <Navbar />
+                <Hero />
+                <SearchInput />
+                <Results />
+            </div>
+        </BookContext.Provider>
     )
 };
 
