@@ -15,11 +15,7 @@ function Results(props) {
             <Container>
             <Row padding="" border="">
                 <Col size="md-10">
-                    <BookHeader>
-                        title ={props.title}
-                        subtitle ={props.subtitle}
-                        authors ={props.authors}
-                    </BookHeader>
+                    <BookHeader/>
                 </Col>
                 <Col size="md-2">
                     <BtnGroup>
@@ -30,7 +26,7 @@ function Results(props) {
             </Row>
             <Row padding="p-2" border="border">
                 <Col size="md-2">
-                    <Image image={props.image} title={props.title} />
+                    <Image/>
                 </Col>
                 <Col size="md-10">
                     <BookDescription description={props.description} />
