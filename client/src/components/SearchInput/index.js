@@ -21,7 +21,7 @@ function SearchInput(props) {
                             aria-label="Book's title"
                             aria-describedby="button-addon"
                         />
-                        <button className="btn btn-outline-secondary" type="button" id="button-addon">Search</button>
+                        <button onClick={props.handleInputSubmit} className="btn btn-outline-secondary" type="button" id="button-addon">Search</button>
                     </div>
                 </div>
             </form>

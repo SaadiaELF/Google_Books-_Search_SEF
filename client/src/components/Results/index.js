@@ -27,7 +27,7 @@ function Results() {
                         </Col>
                         <Col size="md-2">
                             <BtnGroup>
-                                <Button type="secondary">View</Button>
+                                <Button type="secondary" link={book.link}>View</Button>
                                 <Button type="danger">Save</Button>
                             </BtnGroup>
                         </Col>
@@ -42,8 +42,6 @@ function Results() {
                         <Col size="md-10">
                             <BookDescription
                                 description={book.description}
-                                link={book.link}
-                                title={book.title}
                             />
 
                         </Col>
