@@ -13,6 +13,7 @@ function Saved() {
         loadBooks()
     }, [])
 
+    // Reloads books from the db
     function loadBooks() {
         API.getBooks()
             .then(res =>
@@ -21,13 +22,23 @@ function Saved() {
             .catch(err => console.log(err));
     };
 
+    // Deletes a book from the database with a given id, then reloads books from the db
+    function deleteBook(event) {
+        const id = event.target.value;
+        console.log('ok1')
+        API.deleteBook(id)
+            .then(res => loadBooks())
+            .then( console.log('ok2'))
+            .catch(err => console.log(err));
+    }
+
     return (
         <BookContext.Provider value={[savedBooks]}>
-        <div>
-            <Navbar />
-            <Hero />
-            <Favorites />
-        </div>
+            <div>
+                <Navbar />
+                <Hero />
+                <Favorites onClick ={deleteBook}/>
+            </div>
         </BookContext.Provider>
     )
 };
