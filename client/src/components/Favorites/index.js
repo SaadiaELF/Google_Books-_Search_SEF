@@ -8,7 +8,7 @@ import Image from "../Image";
 import Row from "../Row";
 import BookContext from "../../utils/BookContext"
 
-function Favorites() {
+function Favorites(props) {
     const [savedBooks] = useContext(BookContext);
     return (
         <Container>
@@ -26,7 +26,7 @@ function Favorites() {
                         <Col size="md-2">
                             <BtnGroup>
                                 <a href={book.link} role="button" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" >View</a>
-                                {/* <button type="button" className="btn btn-danger" onClick={() => { handleBookSave(book.id) }}>Save</button> */}
+                                <button {...props}  type="button" className="btn btn-danger" value={book._id} >Delete {props.children}</button>
                             </BtnGroup>
                         </Col>
                     </Row>
