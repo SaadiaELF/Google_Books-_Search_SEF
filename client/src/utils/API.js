@@ -8,17 +8,21 @@ export default {
     return axios.get(BASEURL + query + APIKEY)
       .then(res => {
         const books = res.data.items;
-        console.log(books)
         return books.map(book => {
           return {
+            id : book.id,
             title: book.volumeInfo.title,
             subtitle: book.volumeInfo.subtitle,
             authors: book.volumeInfo.authors,
             image: book.volumeInfo.imageLinks.thumbnail,
             description: book.volumeInfo.description,
-            link : book.volumeInfo.previewLink,
+            link: book.volumeInfo.previewLink,
           };
         });
       });
+  },
+  // Saves a book to the database
+  saveBook: function (bookData) {
+    return axios.post("/api/books", bookData);
   }
 };
