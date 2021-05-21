@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import BookDescription from "../BookDescription";
 import BookHeader from "../BookHeader";
 import BtnGroup from "../BtnGroup";
-import Button from "../Button";
 import Col from "../Col";
 import Container from "../Container";
 import Image from "../Image";
@@ -16,7 +15,7 @@ function Results() {
     const handleBookSave = (id) => {
         const book = books.find((book) => book.id === id);
         API.saveBook({
-            // id: book.id,
+            id: book.id,
             title: book.title,
             subtitle: book.subtitle,
             link: book.link,
