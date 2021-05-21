@@ -10,7 +10,7 @@ export default {
         const books = res.data.items;
         return books.map(book => {
           return {
-            id : book.id,
+            id: book.id,
             title: book.volumeInfo.title,
             subtitle: book.volumeInfo.subtitle,
             authors: book.volumeInfo.authors,
@@ -24,5 +24,9 @@ export default {
   // Saves a book to the database
   saveBook: function (bookData) {
     return axios.post("/api/books", bookData);
-  }
+  },
+  // Gets all books from the database
+  getBooks: function () {
+    return axios.get("/api/books");
+  },
 };

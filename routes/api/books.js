@@ -3,6 +3,7 @@ const booksController = require("../../controllers/booksController");
 
 // Matches with "/api/books"
 router.route("/")
-  .post(booksController.create);
+  .post(booksController.create)
+  .get(booksController.findAll);
 
 module.exports = router;
