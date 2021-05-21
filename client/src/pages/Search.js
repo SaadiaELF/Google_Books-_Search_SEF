@@ -28,7 +28,9 @@ function Search() {
 
     const handleFormSubmit = event => {
         event.preventDefault();
+        setSearch(event.target.value);
     };
+
 
     return (
         <BookContext.Provider value={[books]}>
