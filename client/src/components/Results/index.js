@@ -40,9 +40,12 @@ function Results() {
                             />
                         </Col>
                         <Col size="md-10">
-                            <BookDescription>
-                                {book.description}
-                            </BookDescription>
+                            <BookDescription
+                                description={book.description}
+                                link={book.link}
+                                title={book.title}
+                            />
+
                         </Col>
                     </Row>
                 </Container >
