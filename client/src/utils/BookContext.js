@@ -1,13 +1,13 @@
 import React from "react";
 
 const BookContext = React.createContext({
-    id : "",
+    id: "",
     title: "",
     subtitle: "",
     authors: [],
     image: "",
     description: "",
-    link : ""
+    link: ""
 });
 
 export default BookContext;
