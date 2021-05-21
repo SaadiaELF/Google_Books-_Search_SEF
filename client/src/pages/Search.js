@@ -9,7 +9,7 @@ import BookContext from "../utils/BookContext"
 function Search() {
 
     const [books, setBooks] = useState([]);
-    const [search, setSearch] = useState("");
+    const [search, setSearch] = useState("Harry Potter");
 
     useEffect(() => {
         if (!search) {
