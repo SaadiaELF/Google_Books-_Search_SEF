@@ -1,9 +1,6 @@
-import React, {useContext} from "react";
-import BookContext from "../../utils/BookContext"
+import React from "react";
 
-
-function BookHeader({title, subtitle, authors}) {
-    // const {book} = useContext(BookContext);
+function BookHeader({ title, subtitle, authors }) {
     return (
         <div>
             <h4 className="text-start"> Title : {title}</h4>
