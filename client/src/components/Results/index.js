@@ -7,16 +7,29 @@ import Col from "../Col";
 import Container from "../Container";
 import Image from "../Image";
 import Row from "../Row";
+import API from "../../utils/API";
 import BookContext from "../../utils/BookContext"
 
 function Results() {
     const [books] = useContext(BookContext);
+    const handleBookSave = (id) => {
+        const book = books.filter((book) => book.id === id);
+        API.saveBook({
+            id: book.id,
+            title: book.title,
+            subtitle: book.subtitle,
+            link: book.link,
+            authors: book.authors,
+            description: book.description,
+            image: book.image,
+        }).then(() => console.log("ok"));
+    };
     return (
         <Container>
             <h3>Results</h3>
 
             {books.map(book => (
-                <Container>
+                <Container key={book.id}>
                     <Row padding="" border="">
                         <Col size="md-10">
                             <BookHeader
@@ -28,7 +41,7 @@ function Results() {
                         <Col size="md-2">
                             <BtnGroup>
                                 <Button type="secondary" link={book.link}>View</Button>
-                                <Button type="danger">Save</Button>
+                                <Button type="danger" onClick={() => handleBookSave(book.id)}>Save</Button>
                             </BtnGroup>
                         </Col>
                     </Row>
