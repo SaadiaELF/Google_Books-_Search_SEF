@@ -12,17 +12,18 @@ import BookContext from "../../utils/BookContext"
 
 function Results() {
     const [books] = useContext(BookContext);
+
     const handleBookSave = (id) => {
-        const book = books.filter((book) => book.id === id);
+        const book = books.find((book) => book.id === id);
         API.saveBook({
-            id: book.id,
+            // id: book.id,
             title: book.title,
             subtitle: book.subtitle,
             link: book.link,
             authors: book.authors,
             description: book.description,
             image: book.image,
-        }).then(() => console.log("ok"));
+        }).then(() => console.log("Book saved"));
     };
     return (
         <Container>
@@ -40,8 +41,8 @@ function Results() {
                         </Col>
                         <Col size="md-2">
                             <BtnGroup>
-                                <Button type="secondary" link={book.link}>View</Button>
-                                <Button type="danger" onClick={() => handleBookSave(book.id)}>Save</Button>
+                                <a href={book.link} role="button" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" >View</a>
+                                <button type="button" className="btn btn-danger" onClick={() => { handleBookSave(book.id) }}>Save</button>
                             </BtnGroup>
                         </Col>
                     </Row>
