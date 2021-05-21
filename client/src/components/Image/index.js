@@ -1,8 +1,6 @@
-import React, { useContext } from "react";
-import BookContext from "../../utils/BookContext"
+import React from "react";
 
-function Image() {
-    const { image, title } = useContext(BookContext);
+function Image({image, title}) {
     return <img className='img-fluid img-thumbnail rounded float-start' src={image} alt={title} />
 }
 

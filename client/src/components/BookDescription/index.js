@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
-import BookContext from "../../utils/BookContext"
 
-function BookDescription() {
-    const { description } = useContext(BookContext);
-    return <p className="text-start">{description} </p>
-
+function BookDescription({ children }) {
+    return <p className="text-start">{children}</p>
 }
 
 export default BookDescription;
