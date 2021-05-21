@@ -3,7 +3,7 @@ import React from "react";
 const BookContext = React.createContext({
     title: "",
     subtitle: "",
-    authors: "",
+    authors: [],
     image: "",
     description: ""
 });
