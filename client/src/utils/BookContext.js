@@ -5,7 +5,8 @@ const BookContext = React.createContext({
     subtitle: "",
     authors: [],
     image: "",
-    description: ""
+    description: "",
+    link : ""
 });
 
 export default BookContext;
