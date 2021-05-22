@@ -16,17 +16,17 @@ function Favorites(props) {
             {savedBooks.map(book => (
                 <Container key={book.id}>
                     <Row padding="" border="">
-                        <Col size="md-10">
+                        <Col size="md-9">
                             <BookHeader
                                 title={book.title}
                                 subtitle={book.subtitle}
                                 authors={book.authors}
                             />
                         </Col>
-                        <Col size="md-2">
+                        <Col size="md-3">
                             <BtnGroup>
-                                <a href={book.link} role="button" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" >View</a>
-                                <button {...props}  type="button" className="btn btn-danger" value={book._id} >Delete {props.children}</button>
+                                <a href={book.link} role="button" className="btn btn-secondary" target="_blank" rel="noopener noreferrer" > <i className="far fa-eye"></i> View</a>
+                                <button {...props} type="button" className="btn btn-danger" value={book._id} ><i className="fas fa-trash-alt"></i> Delete {props.children}</button>
                             </BtnGroup>
                         </Col>
                     </Row>
