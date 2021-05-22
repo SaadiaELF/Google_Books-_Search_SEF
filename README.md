@@ -71,7 +71,7 @@ JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes i
 
 ## URLs
 
-* The URL of the deployed application : https://saadiaelf.github.io/React_Portfolio_SEF/
+* The URL of the deployed application in Heroku : https://google-books-search-sef.herokuapp.com/
 
 * The URL of the GitHub repository: https://github.com/SaadiaELF/Google_Books_Search_SEF.git
 
