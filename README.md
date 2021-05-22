@@ -65,7 +65,7 @@ JSX stands for JavaScript XML. JSX allows us to write HTML in React. JSX makes i
 
 ## Demonstration :
 
-![Demo](./public/Demo.gif)
+![Demo](./client/public/Demo.gif)
 
 -----------------------------------------------------------------------------------------------------------------------
 
