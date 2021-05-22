@@ -8,9 +8,12 @@ import BookContext from "../utils/BookContext"
 
 function Search() {
 
+    // UseState hook to store list of results
     const [books, setBooks] = useState([]);
+    // UseState Hook to store search term
     const [search, setSearch] = useState("Harry Potter");
 
+    // UseEffect to call the API url and store results
     useEffect(() => {
         if (!search) {
             return;

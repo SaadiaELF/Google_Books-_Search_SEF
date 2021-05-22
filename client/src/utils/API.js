@@ -8,6 +8,7 @@ export default {
     return axios.get(BASEURL + query + APIKEY)
       .then(res => {
         const books = res.data.items;
+        // Map trough out the API results and store the in an array of objects
         return books.map(book => {
           return {
             id: book.id,

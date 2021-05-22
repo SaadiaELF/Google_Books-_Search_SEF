@@ -8,7 +8,7 @@ import BookContext from "../utils/BookContext";
 function Saved() {
     const [savedBooks, setSavedBooks] = useState([]);
 
-    // Load all books and store them with setBooks
+    // Load all books and store them with setSavedBooks
     useEffect(() => {
         loadBooks()
     }, [])
